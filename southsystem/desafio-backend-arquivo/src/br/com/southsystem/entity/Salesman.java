@@ -14,46 +14,46 @@ import br.com.southsystem.utils.Log;
  */
 public class Salesman {
 
-	public static final int TYPE = 1;
+  public static final int TYPE = 1;
 
-	private String cpf = null;
-	private String name = null;
-	private BigDecimal salary = BigDecimal.ZERO.setScale(2, RoundingMode.HALF_UP);
+  private String cpf = null;
+  private String name = null;
+  private BigDecimal salary = BigDecimal.ZERO.setScale(2, RoundingMode.HALF_UP);
 
-	/**
-	 * Constructor
-	 */
-	public Salesman(String[] line) {
-		super();
-		this.cpf = line[1];
-		this.name = line[2];
-		this.salary = new BigDecimal(line[3]).setScale(2, RoundingMode.HALF_UP);
-		
-		Log.info(String.format("Salesman [%s][%s][%s]", cpf, name, salary));
-	}
+  /**
+   * Constructor
+   */
+  public Salesman(String[] line) {
+    super();
+    this.cpf = line[1];
+    this.name = line[2];
+    this.salary = new BigDecimal(line[3]).setScale(2, RoundingMode.HALF_UP);
 
-	public String getCpf() {
-		return cpf;
-	}
+    Log.info(String.format("Salesman [%s][%s][%s]", cpf, name, salary));
+  }
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+  public String getCpf() {
+    return cpf;
+  }
 
-	public String getName() {
-		return name;
-	}
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public BigDecimal getSalary() {
-		return salary;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setSalary(BigDecimal salary) {
-		this.salary = salary;
-	}
+  public BigDecimal getSalary() {
+    return salary;
+  }
+
+  public void setSalary(BigDecimal salary) {
+    this.salary = salary;
+  }
 
 }

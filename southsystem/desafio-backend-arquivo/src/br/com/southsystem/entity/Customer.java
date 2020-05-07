@@ -11,46 +11,46 @@ import br.com.southsystem.utils.Log;
  */
 public class Customer {
 
-	public static final int TYPE = 2;
+  public static final int TYPE = 2;
 
-	private String cnpj = null;
-	private String name = null;
-	private String businessArea = null;
+  private String cnpj = null;
+  private String name = null;
+  private String businessArea = null;
 
-	/**
-	 * Constructor
-	 */
-	public Customer(String[] line) {
-		super();
-		this.cnpj = line[1];
-		this.name = line[2];
-		this.businessArea = line[3];
-		
-		Log.info(String.format("Customer [%s][%s][%s]", cnpj, name, businessArea));
-	}
+  /**
+   * Constructor
+   */
+  public Customer(String[] line) {
+    super();
+    this.cnpj = line[1];
+    this.name = line[2];
+    this.businessArea = line[3];
 
-	public String getCnpj() {
-		return cnpj;
-	}
+    Log.info(String.format("Customer [%s][%s][%s]", cnpj, name, businessArea));
+  }
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
+  public String getCnpj() {
+    return cnpj;
+  }
 
-	public String getName() {
-		return name;
-	}
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public String getBusinessArea() {
-		return businessArea;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setBusinessArea(String businessArea) {
-		this.businessArea = businessArea;
-	}
+  public String getBusinessArea() {
+    return businessArea;
+  }
+
+  public void setBusinessArea(String businessArea) {
+    this.businessArea = businessArea;
+  }
 
 }

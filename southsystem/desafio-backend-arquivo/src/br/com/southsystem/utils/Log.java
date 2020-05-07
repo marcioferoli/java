@@ -12,24 +12,24 @@ import java.util.logging.Logger;
  */
 public class Log {
 
-	private static final Logger LOGGER = Logger.getLogger(Log.class.getName());
+  private static final Logger LOGGER = Logger.getLogger(Log.class.getName());
 
-	static {
-		System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$tF %1$tT] [%4$-7s] %5$s %n");
-		LOGGER.setLevel(Level.WARNING);
-	}
+  static {
+    System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$tF %1$tT] [%4$-7s] %5$s %n");
+    LOGGER.setLevel(Level.WARNING);
+  }
 
-	public static void info(String message) {
-		LOGGER.info(message);
-	}
+  public static void info(String message) {
+    LOGGER.info(message);
+  }
 
-	public static void warning(String message) {
-		LOGGER.warning(message);
-	}
+  public static void warning(String message) {
+    LOGGER.warning(message);
+  }
 
-	public static void severe(Exception e) {
-		LOGGER.severe(e.getMessage());
-		e.printStackTrace();
-	}
+  public static void severe(Exception e) {
+    LOGGER.severe(e.getMessage());
+    e.printStackTrace();
+  }
 
 }
