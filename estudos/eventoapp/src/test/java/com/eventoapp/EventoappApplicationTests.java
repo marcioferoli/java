@@ -1,4 +1,4 @@
-package com.eventoapp.eventoapp;
+package com.eventoapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
