@@ -1,13 +1,13 @@
-package com.eventoapp;
+package com.eventosapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EventoappApplication {
+public class EventosAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EventoappApplication.class, args);
+		SpringApplication.run(EventosAppApplication.class, args);
 	}
 
 }
