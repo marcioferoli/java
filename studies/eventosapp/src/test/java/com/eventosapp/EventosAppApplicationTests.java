@@ -24,7 +24,7 @@ class EventosAppApplicationTests {
 		long actual = 4;
 		
 		assertEquals(expected, actual, "The add method should add two numbers");
-
+		TEST
 		*/
 	
 		RestTemplate restTemplate = new RestTemplate();
