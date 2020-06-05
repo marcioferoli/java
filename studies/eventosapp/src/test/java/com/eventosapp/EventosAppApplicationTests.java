@@ -24,7 +24,6 @@ class EventosAppApplicationTests {
 		long actual = 4;
 		
 		assertEquals(expected, actual, "The add method should add two numbers");
-		TESTXX
 		*/
 	
 		RestTemplate restTemplate = new RestTemplate();
@@ -35,8 +34,5 @@ class EventosAppApplicationTests {
 	    assertEquals(200, result.getStatusCodeValue(), "The status code");
 	    // assertEquals(true, result.getBody().contains("employeeList"), "Test");
 	}
-	
-	
-	
 
 }
