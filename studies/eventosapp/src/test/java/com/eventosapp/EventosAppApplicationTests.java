@@ -27,12 +27,12 @@ class EventosAppApplicationTests {
 		*/
 	
 		RestTemplate restTemplate = new RestTemplate();
-	    URI uri = new URI("http://localhost:8080/");
-	    ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
+		URI uri = new URI("http://localhost:8080/");
+		ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
 
-	    // Verify request succeed
-	    assertEquals(200, result.getStatusCodeValue(), "The status code");
-	    // assertEquals(true, result.getBody().contains("employeeList"), "Test");
+		// Verify request succeed
+		assertEquals(200, result.getStatusCodeValue(), "The status code");
+		// assertEquals(true, result.getBody().contains("employeeList"), "Test");
 	}
 
 }
