@@ -1,19 +1,27 @@
 package com.eventosapp.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Convidado {
 
 	@Id
-	private String rg;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long codigo;
 
+	private String rg;
 	private String nome;
 
-	@ManyToOne
-	private Evento evento;
+	public Long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
 	public String getRg() {
 		return rg;
@@ -29,14 +37,6 @@ public class Convidado {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Evento getEvento() {
-		return evento;
-	}
-
-	public void setEvento(Evento evento) {
-		this.evento = evento;
 	}
 
 }
