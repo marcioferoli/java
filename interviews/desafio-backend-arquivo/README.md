@@ -14,4 +14,3 @@ Utilizei apenas classes do **jdk1.8** em ambiente **Linux + Eclipse 2019-06**.
 [bin]$ java br.com.southsystem.Challenge
 ```
 
-2
