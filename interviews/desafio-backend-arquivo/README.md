@@ -13,3 +13,5 @@ Utilizei apenas classes do **jdk1.8** em ambiente **Linux + Eclipse 2019-06**.
 ```shell
 [bin]$ java br.com.southsystem.Challenge
 ```
+
+#### Teste de Commit
