@@ -23,34 +23,39 @@ public class EventoController {
 
 	@RequestMapping("/eventos")
 	public ModelAndView listar() {
-		Iterable<Evento> eventos = eventoRepository.findAll();
+		ModelAndView modelAndView = new ModelAndView("evento/listar");
 
-		ModelAndView modelAndView = new ModelAndView("index");
+		Iterable<Evento> eventos = eventoRepository.findAll();
 		modelAndView.addObject("eventos", eventos);
+
 		return modelAndView;
 	}
 
 	@RequestMapping(value = "/eventoCadastrar", method = RequestMethod.GET)
-	public String cadastrarForm() {
+	public String cadastrarGet() {
 		return "evento/cadastrar";
 	}
 
 	@RequestMapping(value = "/eventoCadastrar", method = RequestMethod.POST)
-	public String cadastrarSave(Evento evento) {
+	public String cadastrarPost(Evento evento) {
 		eventoRepository.save(evento);
 		return "redirect:/eventoCadastrar";
 	}
 
-	@RequestMapping(value = "/{eventoCodigo}", method = RequestMethod.GET)
-	public ModelAndView detalhar(@PathVariable("eventoCodigo") Long eventoCodigo) {
+	@RequestMapping(value = "/eventoDetalhar/{eventoCodigo}", method = RequestMethod.GET)
+	public ModelAndView detalharGet(@PathVariable("eventoCodigo") Long eventoCodigo) {
 		Evento evento = eventoRepository.findByCodigo(eventoCodigo);
 
 		ModelAndView modelAndView = new ModelAndView("evento/detalhar");
 		modelAndView.addObject("evento", evento);
+
+		Iterable<Convidado> convidados = evento.getConvidados();
+		modelAndView.addObject("convidados", convidados);
+
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/{eventoCodigo}", method = RequestMethod.POST)
+	@RequestMapping(value = "/eventoDetalhar/{eventoCodigo}", method = RequestMethod.POST)
 	public String detalharPost(@PathVariable("eventoCodigo") Long eventoCodigo, Convidado convidado) {
 		convidadoRepository.save(convidado);
 
@@ -58,7 +63,7 @@ public class EventoController {
 		evento.getConvidados().add(convidado);
 		eventoRepository.save(evento);
 
-		return "redirect:/{eventoCodigo}";
+		return "redirect:/eventoDetalhar/{eventoCodigo}";
 	}
 
 }
