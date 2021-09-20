@@ -29,6 +29,14 @@ public class OlaDevDojo {
         var testeString = "testeString";
         System.out.println(testeString);
 
+        int n1 = 10;
+        int n2 = 20;
+        System.out.println(n1 / (double) n2);
+
+        int resto = 21 % 2;
+        System.out.println(resto);
+
+
     }
 
 }
