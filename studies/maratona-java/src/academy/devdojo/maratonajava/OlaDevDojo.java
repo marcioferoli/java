@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.introducao;
+package academy.devdojo.maratonajava;
 
 import java.util.Arrays;
 
@@ -36,6 +36,14 @@ public class OlaDevDojo {
         int resto = 21 % 2;
         System.out.println(resto);
 
+        int count = 0;
+        do {
+            System.out.println(count);
+            count++;
+        } while (count < 10);
+
+        VarArgsDemo vad = new VarArgsDemo();
+        vad.soma(1, 2, 3);
 
     }
 
